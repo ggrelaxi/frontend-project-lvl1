@@ -27,5 +27,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    run: |
-      make lint
+    - name: run linter check
+      run: echo Hello, world!
