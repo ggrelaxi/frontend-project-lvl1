@@ -5,8 +5,11 @@ const brainCalc = () => {
   console.log('What is the result of the expression?');
   let i = 0;
   while (i <= 2) {
-    const expression = `${engine.GetRandInt()} ${engine.GetRandOperator()} ${engine.GetRandInt()}`;
-    const correctResult = eval(expression);
+    const firstOper = engine.GetRandInt();
+    const secondOper = engine.GetRandInt();
+    const operator = engine.GetRandOperator();
+    const expression = `${firstOper} ${operator} ${secondOper}`;
+    const correctResult = engine.CalculatedMathResult(firstOper, operator, secondOper);
     const userAnswer = Number(engine.readlineSync.question(`Question: ${expression}\nYou answer: `));
     if (userAnswer === correctResult) {
       console.log('Correct!');

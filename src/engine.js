@@ -25,6 +25,19 @@ export const GetRandOperator = () => {
   return arrayOperator[randOperator];
 };
 
+export const CalculatedMathResult = (oper1, operator, oper2) => {
+  switch (operator) {
+    case '+':
+      return oper1 + oper2;
+    case '-':
+      return oper1 - oper2;
+    case '*':
+      return oper1 * oper2;
+    default:
+      return 'some problem';
+  }
+};
+
 export const calculateGcd = (num1, num2) => {
   let number1 = num1;
   let number2 = num2;
