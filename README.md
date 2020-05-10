@@ -5,8 +5,12 @@
 
 ## For start game "Brain even"
 ```sh
-$ make brain even
+$ make brain-even
 ```
 [![asciicast](https://asciinema.org/a/R9CFUlMJM1oT1guYmeBoVnlpt.png)](https://asciinema.org/a/R9CFUlMJM1oT1guYmeBoVnlpt)
 
-<script src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>
+## For start game "Brain calc"
+```sh
+$ make brain-calc
+```
+[![asciicast](https://asciinema.org/a/lndE7RCv1LqhXG5P9WRN88oGG.png)](https://asciinema.org/a/lndE7RCv1LqhXG5P9WRN88oGG)
