@@ -20,3 +20,9 @@ $ make brain-calc
 $ make brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/vGkB3rqU2ZIJcL7pCY5uaZRWT.png)](https://asciinema.org/a/vGkB3rqU2ZIJcL7pCY5uaZRWT)
+
+## For start game "Brain progression"
+```sh
+$ make brain-progression
+```
+[![asciicast](https://asciinema.org/a/NuDeD51dWVcK2nlzuUPw6omEQ.png)](https://asciinema.org/a/NuDeD51dWVcK2nlzuUPw6omEQ)
