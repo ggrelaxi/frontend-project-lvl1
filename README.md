@@ -26,3 +26,9 @@ $ make brain-gcd
 $ make brain-progression
 ```
 [![asciicast](https://asciinema.org/a/NuDeD51dWVcK2nlzuUPw6omEQ.png)](https://asciinema.org/a/NuDeD51dWVcK2nlzuUPw6omEQ)
+
+## For start game "Brain prime"
+```sh
+$ make brain-prime
+```
+[![asciicast](https://asciinema.org/a/mvHqkoZ1G7w1P5H0EgcF6T3ai.png)](https://asciinema.org/a/mvHqkoZ1G7w1P5H0EgcF6T3ai)

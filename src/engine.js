@@ -98,3 +98,20 @@ export const hideIndexProgress = (arr) => {
   const resultStringProgress = progressArray.join(' ');
   return [correctAnswer, resultStringProgress];
 };
+
+// Проверка, простое ли число
+
+export const NumberIsSimple = (number) => {
+  if (number < 2) {
+    return false;
+  }
+  if (number === 2) {
+    return true;
+  }
+  for (let i = 3; i <= number / 2; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
