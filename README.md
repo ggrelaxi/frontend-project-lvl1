@@ -14,3 +14,9 @@ $ make brain-even
 $ make brain-calc
 ```
 [![asciicast](https://asciinema.org/a/lndE7RCv1LqhXG5P9WRN88oGG.png)](https://asciinema.org/a/lndE7RCv1LqhXG5P9WRN88oGG)
+
+## For start game "Brain gcd"
+```sh
+$ make brain-calc
+```
+[![asciicast](https://asciinema.org/a/vGkB3rqU2ZIJcL7pCY5uaZRWT.png)](https://asciinema.org/a/vGkB3rqU2ZIJcL7pCY5uaZRWT)
