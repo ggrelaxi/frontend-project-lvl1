@@ -1,22 +1,18 @@
-import * as engine from '../engine.js';
+import * as func from '../func.js';
+import engine from '../engine.js';
 
-const brainGcd = () => {
-  engine.greeting();
-  console.log('Find the greatest common divisor of given numbers.');
-  let i = 0;
-  while (i <= 2) {
-    const firstInt = engine.GetRandInt();
-    const secondInt = engine.GetRandInt();
-    const gcd = engine.calculateGcd(firstInt, secondInt);
-    const userAnswer = Number(engine.readlineSync.question(`Question: ${firstInt} ${secondInt} \nYou answer: `));
-    if (userAnswer === gcd) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      return console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${gcd}".\n${engine.badAnswer}`);
-    }
-  }
-  return engine.victoryMessage();
+const generateRound = () => {
+  const firstInt = func.GetRandInt();
+  const secondInt = func.GetRandInt();
+  const gcd = String(func.calculateGcd(firstInt, secondInt));
+  const question = `${firstInt} ${secondInt}`;
+  return [question, gcd];
 };
+
+const questionString = 'Find the greatest common divisor of given numbers.';
+
+const game = () => [generateRound(), generateRound(), generateRound()];
+
+const brainGcd = () => engine(game(), questionString);
 
 export default brainGcd;

@@ -1,23 +1,18 @@
-import * as engine from '../engine.js';
+import * as func from '../func.js';
+import engine from '../engine.js';
 
-const brainProgression = () => {
-  engine.greeting();
-  console.log('What number is missing in the progression?');
-  let i = 0;
-  while (i <= 2) {
-    const randomProgression = engine.progress();
-    const resultProgression = engine.hideIndexProgress(randomProgression);
-    const resultProgressionString = resultProgression[1];
-    const correctAnswer = resultProgression[0];
-    const userAnswer = Number(engine.readlineSync.question(`Question: ${resultProgressionString}\nYou answer: `));
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      return console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${engine.userName}!`);
-    }
-  }
-  return engine.victoryMessage();
+const generateRound = () => {
+  const randomProgression = func.progress();
+  const resultProgression = func.hideIndexProgress(randomProgression);
+  const correctAnswer = String(resultProgression[0]);
+  const question = resultProgression[1];
+  return [question, correctAnswer];
 };
+
+const questionString = 'What number is missing in the progression?';
+
+const game = () => [generateRound(), generateRound(), generateRound()];
+
+const brainProgression = () => engine(game(), questionString);
 
 export default brainProgression;
