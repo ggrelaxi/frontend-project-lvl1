@@ -1,8 +1,11 @@
 import readlineSync from 'readline-sync';
 
+// Конфигурационный настройки
+
+export const roundCount = 3; // количество раундов
+
 const engine = (rounds, description) => {
   const userName = readlineSync.question('May I have your name? ');
-  const roundCount = 3;
   console.log('Welcome to the Brain Games!');
   console.log(`Hello, ${userName}!`);
   console.log(description);

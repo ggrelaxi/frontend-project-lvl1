@@ -1,11 +1,13 @@
-import GetRandInt from '../utils.js';
+import getRandInt from '../utils.js';
 import engine from '../engine.js';
+
+const questionString = 'What number is missing in the progression?';
 
 // Формирование случайно арифметической прогрессии
 
 const progress = () => {
-  const progStep = GetRandInt(1, 100);
-  let firstElement = GetRandInt(1, 1000);
+  const progStep = getRandInt(1, 100);
+  let firstElement = getRandInt(1, 1000);
   let i = 1;
   const resultProgress = [];
   while (i <= 10) {
@@ -20,7 +22,7 @@ const progress = () => {
 
 const hideIndexProgress = (arr) => {
   const progressArray = arr;
-  const hideIndex = GetRandInt(0, 9);
+  const hideIndex = getRandInt(0, 9);
   const correctAnswer = progressArray[hideIndex];
   progressArray[hideIndex] = '..';
   const resultStringProgress = progressArray.join(' ');
@@ -34,8 +36,6 @@ const generateRound = () => {
   const question = resultProgression[1];
   return [question, correctAnswer];
 };
-
-const questionString = 'What number is missing in the progression?';
 
 const game = () => {
   const rounds = [];

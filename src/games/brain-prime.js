@@ -1,5 +1,7 @@
-import GetRandInt from '../utils.js';
+import getRandInt from '../utils.js';
 import engine from '../engine.js';
+
+const questionString = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // Проверка, простое ли число
 
@@ -16,12 +18,10 @@ const numberIsSimple = (number) => {
 };
 
 const generateRound = () => {
-  const actualNumber = GetRandInt(1, 100);
+  const actualNumber = getRandInt(1, 100);
   const correctAnswer = numberIsSimple(actualNumber) === true ? 'yes' : 'no';
   return [actualNumber, correctAnswer];
 };
-
-const questionString = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const game = () => {
   const rounds = [];

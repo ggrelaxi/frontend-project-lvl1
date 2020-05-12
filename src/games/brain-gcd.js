@@ -1,5 +1,7 @@
-import GetRandInt from '../utils.js';
+import getRandInt from '../utils.js';
 import engine from '../engine.js';
+
+const questionString = 'Find the greatest common divisor of given numbers.';
 
 // Вычисление НОД
 
@@ -17,14 +19,12 @@ const calculateGcd = (num1, num2) => {
 };
 
 const generateRound = () => {
-  const firstInt = GetRandInt(1, 100);
-  const secondInt = GetRandInt(1, 100);
+  const firstInt = getRandInt(1, 100);
+  const secondInt = getRandInt(1, 100);
   const gcd = String(calculateGcd(firstInt, secondInt));
   const question = `${firstInt} ${secondInt}`;
   return [question, gcd];
 };
-
-const questionString = 'Find the greatest common divisor of given numbers.';
 
 const game = () => {
   const rounds = [];
