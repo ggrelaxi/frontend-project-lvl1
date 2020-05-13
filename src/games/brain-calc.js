@@ -1,4 +1,4 @@
-import getRandInt from '../utils.js';
+import { getRandInt } from '../utils.js';
 import engine, { roundCount } from '../engine.js';
 
 const questionString = 'What is the result of the expression?';

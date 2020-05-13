@@ -1,5 +1,5 @@
-import getRandInt from '../utils.js';
-import engine from '../engine.js';
+import { getRandInt } from '../utils.js';
+import engine, { roundCount } from '../engine.js';
 
 const questionString = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -15,7 +15,7 @@ const generateRound = () => {
 
 const game = () => {
   const rounds = [];
-  for (let i = 0; i <= 2; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     rounds[i] = generateRound();
   }
   return rounds;

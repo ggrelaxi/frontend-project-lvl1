@@ -1,45 +1,30 @@
-import getRandInt from '../utils.js';
-import engine from '../engine.js';
+import { getRandInt } from '../utils.js';
+import engine, { roundCount } from '../engine.js';
 
 const questionString = 'What number is missing in the progression?';
 
 // Формирование случайно арифметической прогрессии
 
-const progress = () => {
+const generateRound = () => {
   const progStep = getRandInt(1, 100);
   let firstElement = getRandInt(1, 1000);
   let i = 1;
-  const resultProgress = [];
+  const resultProgression = [];
   while (i <= 10) {
-    resultProgress.push(firstElement);
+    resultProgression.push(firstElement);
     firstElement += progStep;
     i += 1;
   }
-  return resultProgress;
-};
-
-// Вывод прогрессии со скрытым элементом
-
-const hideIndexProgress = (arr) => {
-  const progressArray = arr;
   const hideIndex = getRandInt(0, 9);
-  const correctAnswer = progressArray[hideIndex];
-  progressArray[hideIndex] = '..';
-  const resultStringProgress = progressArray.join(' ');
-  return [correctAnswer, resultStringProgress];
-};
-
-const generateRound = () => {
-  const randomProgression = progress();
-  const resultProgression = hideIndexProgress(randomProgression);
-  const correctAnswer = String(resultProgression[0]);
-  const question = resultProgression[1];
+  const correctAnswer = String(resultProgression[hideIndex]);
+  resultProgression[hideIndex] = '..';
+  const question = resultProgression.join(' ');
   return [question, correctAnswer];
 };
 
 const game = () => {
   const rounds = [];
-  for (let i = 0; i <= 2; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     rounds[i] = generateRound();
   }
   return rounds;
