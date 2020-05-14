@@ -3,15 +3,11 @@ import engine, { roundCount } from '../engine.js';
 
 const questionString = 'What is the result of the expression?';
 
-// Получение случайного математического оператора
-
 const getRandOperator = () => {
   const arrayOperator = ['+', '-', '*'];
   const randOperatorIndex = getRandomNumber(0, arrayOperator.lenght - 1);
   return arrayOperator[randOperatorIndex];
 };
-
-// Вычисление арифметического выражения, в зависимости от пришедшего оператора
 
 const calculatedMathResult = (operand1, operand2, operator) => {
   switch (operator) {

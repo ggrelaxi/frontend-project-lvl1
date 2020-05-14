@@ -1,8 +1,6 @@
 import readlineSync from 'readline-sync';
 
-// Конфигурационный настройки
-
-export const roundCount = 3; // количество раундов
+export const roundCount = 3;
 
 const engine = (rounds, description) => {
   const userName = readlineSync.question('May I have your name? ');

@@ -3,8 +3,6 @@ import engine, { roundCount } from '../engine.js';
 
 const questionString = 'Find the greatest common divisor of given numbers.';
 
-// Вычисление НОД
-
 const calculateGcd = (num1, num2) => {
   if (num1 === 0) {
     return num2;

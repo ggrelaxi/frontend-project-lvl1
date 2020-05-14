@@ -3,8 +3,6 @@ import engine, { roundCount } from '../engine.js';
 
 const questionString = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-// Проверка числа на четность
-
 const isNumberEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
 const generateRound = () => {

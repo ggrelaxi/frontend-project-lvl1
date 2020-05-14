@@ -3,8 +3,6 @@ import engine, { roundCount } from '../engine.js';
 
 const questionString = 'What number is missing in the progression?';
 
-// Формирование случайно арифметической прогрессии
-
 const generateRound = () => {
   const progStep = getRandomNumber(1, 100);
   let firstElement = getRandomNumber(1, 1000);

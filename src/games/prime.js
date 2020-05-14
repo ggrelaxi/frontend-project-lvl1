@@ -3,8 +3,6 @@ import engine, { roundCount } from '../engine.js';
 
 const questionString = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-// Проверка, простое ли число
-
 const isNumberSimple = (number) => {
   if (number < 2) {
     return false;
