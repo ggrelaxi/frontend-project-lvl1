@@ -1,11 +1,11 @@
-import { getRandInt } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 import engine, { roundCount } from '../engine.js';
 
 const questionString = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // Проверка, простое ли число
 
-const numberIsSimple = (number) => {
+const isNumberSimple = (number) => {
   if (number < 2) {
     return false;
   }
@@ -18,8 +18,8 @@ const numberIsSimple = (number) => {
 };
 
 const generateRound = () => {
-  const actualNumber = getRandInt(1, 100);
-  const correctAnswer = numberIsSimple(actualNumber) === true ? 'yes' : 'no';
+  const actualNumber = getRandomNumber(1, 100);
+  const correctAnswer = isNumberSimple(actualNumber) === true ? 'yes' : 'no';
   return [actualNumber, correctAnswer];
 };
 

@@ -1,4 +1,4 @@
-import { getRandInt } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 import engine, { roundCount } from '../engine.js';
 
 const questionString = 'What is the result of the expression?';
@@ -7,28 +7,28 @@ const questionString = 'What is the result of the expression?';
 
 const getRandOperator = () => {
   const arrayOperator = ['+', '-', '*'];
-  const randOperatorIndex = getRandInt(0, 2);
+  const randOperatorIndex = getRandomNumber(0, arrayOperator.lenght - 1);
   return arrayOperator[randOperatorIndex];
 };
 
 // Вычисление арифметического выражения, в зависимости от пришедшего оператора
 
-const calculatedMathResult = (oper1, oper2, operator) => {
+const calculatedMathResult = (operand1, operand2, operator) => {
   switch (operator) {
     case '+':
-      return oper1 + oper2;
+      return operand1 + operand2;
     case '-':
-      return oper1 - oper2;
+      return operand1 - operand2;
     case '*':
-      return oper1 * oper2;
+      return operand1 * operand2;
     default:
       return 'some problem';
   }
 };
 
 const generateRound = () => {
-  const firstOper = getRandInt(1, 100);
-  const secondOper = getRandInt(1, 100);
+  const firstOper = getRandomNumber(1, 100);
+  const secondOper = getRandomNumber(1, 100);
   const operator = getRandOperator();
   const expression = `${firstOper} ${operator} ${secondOper}`;
   const correctAnswer = String(calculatedMathResult(firstOper, secondOper, operator));

@@ -1,4 +1,4 @@
-import { getRandInt } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 import engine, { roundCount } from '../engine.js';
 
 const questionString = 'Find the greatest common divisor of given numbers.';
@@ -13,10 +13,10 @@ const calculateGcd = (num1, num2) => {
 };
 
 const generateRound = () => {
-  const firstInt = getRandInt(1, 100);
-  const secondInt = getRandInt(1, 100);
-  const correctAnswer = String(calculateGcd(firstInt, secondInt));
-  const question = `${firstInt} ${secondInt}`;
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
+  const correctAnswer = String(calculateGcd(firstNumber, secondNumber));
+  const question = `${firstNumber} ${secondNumber}`;
   return [question, correctAnswer];
 };
 
