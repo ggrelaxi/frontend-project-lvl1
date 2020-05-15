@@ -9,7 +9,8 @@ const engine = (rounds, description) => {
   console.log(description);
   for (let i = 0; i < roundCount; i += 1) {
     const [question, answer] = rounds[i];
-    const userAnswer = readlineSync.question(`Question: ${question}\nYou answer: `);
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('You answer: ');
     console.log(userAnswer);
     if (userAnswer === answer) {
       console.log('Correct!');

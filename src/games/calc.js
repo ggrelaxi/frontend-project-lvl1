@@ -5,7 +5,7 @@ const description = 'What is the result of the expression?';
 
 const getRandOperator = () => {
   const arrayOperator = ['+', '-', '*'];
-  const randOperatorIndex = getRandomNumber(0, arrayOperator.lenght - 1);
+  const randOperatorIndex = getRandomNumber(0, arrayOperator.length - 1);
   return arrayOperator[randOperatorIndex];
 };
 
@@ -27,7 +27,7 @@ const generateRound = () => {
   const secondOperand = getRandomNumber(1, 100);
   const operator = getRandOperator();
   const expression = `${firstOperand} ${operator} ${secondOperand}`;
-  const correctAnswer = String(calculate(firstOperand, secondOperand, operator));
+  const correctAnswer = String(calculate(operator, firstOperand, secondOperand));
   return [expression, correctAnswer];
 };
 

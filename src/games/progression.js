@@ -2,9 +2,9 @@ import { getRandomNumber } from '../utils.js';
 import engine, { roundCount } from '../engine.js';
 
 const description = 'What number is missing in the progression?';
+const progressionLength = 11;
 
 const generateRound = () => {
-  const progressionLength = 11;
   const step = getRandomNumber(1, 100);
   const resultProgression = [];
   const startNum = getRandomNumber(1, 1000);
