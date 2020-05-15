@@ -1,7 +1,7 @@
 import { getRandomNumber } from '../utils.js';
 import engine, { roundCount } from '../engine.js';
 
-const questionString = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getRandOperator = () => {
   const arrayOperator = ['+', '-', '*'];
@@ -9,7 +9,7 @@ const getRandOperator = () => {
   return arrayOperator[randOperatorIndex];
 };
 
-const calculatedMathResult = (operator, operand1, operand2) => {
+const calculate = (operator, operand1, operand2) => {
   switch (operator) {
     case '+':
       return operand1 + operand2;
@@ -27,18 +27,16 @@ const generateRound = () => {
   const secondOperand = getRandomNumber(1, 100);
   const operator = getRandOperator();
   const expression = `${firstOperand} ${operator} ${secondOperand}`;
-  const correctAnswer = String(calculatedMathResult(firstOperand, secondOperand, operator));
+  const correctAnswer = String(calculate(firstOperand, secondOperand, operator));
   return [expression, correctAnswer];
 };
 
-const game = () => {
+const runCalcGame = () => {
   const rounds = [];
   for (let i = 0; i < roundCount; i += 1) {
     rounds[i] = generateRound();
   }
-  return rounds;
+  return engine(rounds, description);
 };
 
-const brainCalc = () => engine(game(), questionString);
-
-export default brainCalc;
+export default runCalcGame;

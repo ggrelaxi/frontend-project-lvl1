@@ -1,9 +1,9 @@
 import { getRandomNumber } from '../utils.js';
 import engine, { roundCount } from '../engine.js';
 
-const questionString = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isNumberSimple = (number) => {
+const isPrime = (number) => {
   if (number < 2) {
     return false;
   }
@@ -17,18 +17,16 @@ const isNumberSimple = (number) => {
 
 const generateRound = () => {
   const actualNumber = getRandomNumber(1, 100);
-  const correctAnswer = isNumberSimple(actualNumber) === true ? 'yes' : 'no';
+  const correctAnswer = isPrime(actualNumber) === true ? 'yes' : 'no';
   return [actualNumber, correctAnswer];
 };
 
-const game = () => {
+const runPrimeGame = () => {
   const rounds = [];
   for (let i = 0; i < roundCount; i += 1) {
     rounds[i] = generateRound();
   }
-  return rounds;
+  return engine(rounds, description);
 };
 
-const brainPrime = () => engine(game(), questionString);
-
-export default brainPrime;
+export default runPrimeGame;
