@@ -11,30 +11,30 @@ $ npm link
 
 ## For start game "Brain even"
 ```sh
-$ make brain-even
+$ brain-even
 ```
 [![asciicast](https://asciinema.org/a/331819.png)](https://asciinema.org/a/331819)
 
 ## For start game "Brain calc"
 ```sh
-$ make brain-calc
+$ brain-calc
 ```
 [![asciicast](https://asciinema.org/a/331819.png)](https://asciinema.org/a/331819)
 
 ## For start game "Brain gcd"
 ```sh
-$ make brain-gcd
+$ brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/331822.png)](https://asciinema.org/a/331822)
 
 ## For start game "Brain progression"
 ```sh
-$ make brain-progression
+$ brain-progression
 ```
 [![asciicast](https://asciinema.org/a/331824.png)](https://asciinema.org/a/331824)
 
 ## For start game "Brain prime"
 ```sh
-$ make brain-prime
+$ brain-prime
 ```
 [![asciicast](https://asciinema.org/a/331823.png)](https://asciinema.org/a/331823)
