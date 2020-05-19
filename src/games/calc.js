@@ -4,9 +4,9 @@ import engine, { roundCount } from '../engine.js';
 const description = 'What is the result of the expression?';
 
 const getRandOperator = () => {
-  const arrayOperator = ['+', '-', '*'];
-  const randOperatorIndex = getRandomNumber(0, arrayOperator.length - 1);
-  return arrayOperator[randOperatorIndex];
+  const operators = ['+', '-', '*'];
+  const randOperatorIndex = getRandomNumber(0, operators.length - 1);
+  return operators[randOperatorIndex];
 };
 
 const calculate = (operator, operand1, operand2) => {
@@ -18,7 +18,7 @@ const calculate = (operator, operand1, operand2) => {
     case '*':
       return operand1 * operand2;
     default:
-      return 'some problem';
+      return Error('Incorrect operator');
   }
 };
 
@@ -26,9 +26,9 @@ const generateRound = () => {
   const firstOperand = getRandomNumber(1, 100);
   const secondOperand = getRandomNumber(1, 100);
   const operator = getRandOperator();
-  const expression = `${firstOperand} ${operator} ${secondOperand}`;
+  const question = `${firstOperand} ${operator} ${secondOperand}`;
   const correctAnswer = String(calculate(operator, firstOperand, secondOperand));
-  return [expression, correctAnswer];
+  return [question, correctAnswer];
 };
 
 const runCalcGame = () => {

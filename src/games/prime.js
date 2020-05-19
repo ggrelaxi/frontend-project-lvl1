@@ -16,9 +16,9 @@ const isPrime = (number) => {
 };
 
 const generateRound = () => {
-  const actualNumber = getRandomNumber(1, 100);
-  const correctAnswer = isPrime(actualNumber) === true ? 'yes' : 'no';
-  return [actualNumber, correctAnswer];
+  const question = getRandomNumber(1, 100);
+  const correctAnswer = isPrime(question) === true ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
 const runPrimeGame = () => {
