@@ -3,12 +3,12 @@ import engine, { roundCount } from '../engine.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = (number) => number % 2 === 0;
 
 const generateRound = () => {
-  const randomNumber = getRandomNumber(1, 100);
-  const correctAnswer = isEven(randomNumber);
-  return [randomNumber, correctAnswer];
+  const question = getRandomNumber(1, 100);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
 const runEvenGame = () => {
